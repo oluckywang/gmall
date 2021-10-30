@@ -1,0 +1,20 @@
+server:
+  port: 8082
+logging:
+  level: info
+dubbo:
+  application:
+    name: user-manage-web
+  registry:
+    address: nacos://127.0.0.1:8848
+    username: nacos
+    password: nacos
+    #启动注册中心是是否检查
+    check: false
+  protocol:
+    name: dubbo
+    port: 2880
+  #启动是是否检查
+  consumer:
+    check: false
+debug: true
