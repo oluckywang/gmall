@@ -17,6 +17,7 @@ import lombok.experimental.Accessors;
  * @since 2020-04-18
  */
 @TableName("pms_base_catalog3")
+@Data
 public class PmsBaseCatalog3 implements Serializable {
 
     private static final long serialVersionUID=1L;

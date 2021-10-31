@@ -12,6 +12,8 @@
         <module>gmall-common-util</module>
         <module>gmall-manage-web</module>
         <module>gmall-web-util</module>
+        <module>gmall-manage-service</module>
+        <module>gmall-service-util</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -29,7 +31,7 @@
 
         <fastjson.version>1.2.46</fastjson.version>
         <dubbo-starter.version>2.7.7</dubbo-starter.version>
-        <dubbo.version>2.6.0</dubbo.version>
+<!--        <dubbo.version>2.6.0</dubbo.version>-->
 <!--        <zkclient.version>0.10</zkclient.version>-->
         <nacos-client.version>1.4.0</nacos-client.version>
         <nekohtml.version>1.9.20</nekohtml.version>
@@ -59,11 +61,11 @@
                 <artifactId>nacos-client</artifactId>
                 <version>${nacos-client.version}</version>
             </dependency>
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>dubbo</artifactId>
-                <version>${dubbo.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>com.alibaba</groupId>-->
+<!--                <artifactId>dubbo</artifactId>-->
+<!--                <version>${dubbo.version}</version>-->
+<!--            </dependency>-->
 
 <!--            <dependency>-->
 <!--                <groupId>com.101tec</groupId>-->
@@ -165,8 +167,6 @@
                 <artifactId>velocity-engine-core</artifactId>
                 <version>${apache-velocity.version}</version>
             </dependency>
-
-
         </dependencies>
     </dependencyManagement>
 

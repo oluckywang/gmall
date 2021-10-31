@@ -6,6 +6,7 @@ import com.wangL.gmall.bean.PmsBaseCatalog2;
 import com.wangL.gmall.bean.PmsBaseCatalog3;
 import com.wangL.gmall.service.CatalogService;
 import jdk.nashorn.internal.ir.annotations.Reference;
+import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -24,10 +25,10 @@ import java.util.List;
  * @since 2020-04-18
  */
 @RestController
-//@CrossOrigin
+@CrossOrigin
 public class CataLogController {
 
-    @Reference
+    @DubboReference
     CatalogService catalogService;
 
     @RequestMapping("/getCatalog1")
@@ -38,19 +39,17 @@ public class CataLogController {
     }
 
 
-//    @RequestMapping("/getCatalog2")
-//    @ResponseBody
-//    public List<PmsBaseCatalog2> getCatalog2(String catalog1Id){
-//        List<PmsBaseCatalog2> catalogs = catalogService.getCatalog2(catalog1Id);
-//        return catalogs;
-//    }
-//
-//    @RequestMapping("/getCatalog3")
-//    @ResponseBody
-//    public List<PmsBaseCatalog3> getCatalog3(String catalog2Id){
-//        List<PmsBaseCatalog3> catalogs = catalogService.getCatalog3(catalog2Id);
-//        return catalogs;
-//    }
+    @RequestMapping("/getCatalog2")
+    public List<PmsBaseCatalog2> getCatalog2(String catalog1Id){
+        List<PmsBaseCatalog2> catalogs = catalogService.getCatalog2(catalog1Id);
+        return catalogs;
+    }
+
+    @RequestMapping("/getCatalog3")
+    public List<PmsBaseCatalog3> getCatalog3(String catalog2Id){
+        List<PmsBaseCatalog3> catalogs = catalogService.getCatalog3(catalog2Id);
+        return catalogs;
+    }
 
 
 

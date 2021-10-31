@@ -17,4 +17,3 @@ dubbo:
   #启动是是否检查
   consumer:
     check: false
-debug: true
